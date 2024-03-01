@@ -2630,8 +2630,10 @@ version = "0.0.8"
 dependencies = [
  "clap",
  "fs_extra",
+ "libc",
  "uucore",
  "uucore_procs",
+ "winapi 0.3.9",
 ]
 
 [[package]]

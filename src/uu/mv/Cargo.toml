@@ -20,6 +20,12 @@ fs_extra = "1.1.0"
 uucore = { version=">=0.0.10", package="uucore", path="../../uucore" }
 uucore_procs = { version=">=0.0.7", package="uucore_procs", path="../../uucore_procs" }
 
+[target.'cfg(target_os = "windows")'.dependencies]
+winapi = { version="0.3", features=["fileapi"] }
+
+[target.'cfg(target_os = "unix")'.dependencies]
+libc = "0.2.42"
+
 [[bin]]
 name = "mv"
 path = "src/main.rs"
